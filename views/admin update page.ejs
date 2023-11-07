@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/adminupdate.css">
+</head>
+<body>
+  <form id="updateForm" action="/admin/updateuser" method="post">
+    <table border="1">
+      <thead>
+          <tr>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Actions</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><input type="text" id="username" name="username" value="<%=userData.username %>"></td>
+              <td><input type="text" id="email" name="email" value="<%=userData.email %>"></td>
+              
+              <td>
+                  <button type="submit">Update</button>
+                  <button type="button" onclick="cancelUpdate(1)">Cancel</button>
+              </td>
+              <td><input type="text" id="id" name="userId" value="<%=userData._id %>" style="display: none"></td>
+          </tr>
+      </tbody>
+    </table>
+  </form>
+</body>
+</html>
